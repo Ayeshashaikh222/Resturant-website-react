@@ -26,9 +26,12 @@ function BrowseByCategory() {
   ];
 
   return (
-    <div className="w-full flex h-full p-4 ">
+    <div className="w-full flex p-2 md:p-4 flex-wrap border border-red-600">
       {ketoData.map((item, index) => (
-        <div key={index} className="w-full mr-3 border border-red-600">
+        <div
+          key={index}
+          className="w-[219px] md:w-[279px] mr-3 border border-red-600"
+        >
           <div className="w-full h-64">
             <img
               src={item.imagesSrc}

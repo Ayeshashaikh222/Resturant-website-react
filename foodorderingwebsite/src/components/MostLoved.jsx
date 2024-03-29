@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 function MostLoved() {
   const mostLovedData = [
@@ -48,20 +48,40 @@ function MostLoved() {
     },
   ];
 
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const scrollRef = useRef(null);
+
+  // const handleScroll = (direction) => {
+  //   const scrollWidth = scrollRef.current.scrollWidth;
+  //   const newPosition =
+  //     direction === "left"
+  //       ? Math.max(scrollPosition - 300, 0)
+  //       : Math.min(scrollPosition + 300, scrollWidth);
+  //   scrollRef.current.scrollTo({
+  //     left: newPosition,
+  //     behavior: "smooth",
+  //   });
+  //   setScrollPosition(newPosition);
+  // };
+
   return (
     <div className="w-[420px] md:w-full flex h-full p-4 ">
       {mostLovedData.map((item, index) => (
-        <div key={index} className="w-full mr-3 border border-red-600">
-          <div className="w-full h-64">
+        <div key={index} className="w-full h-54 mr-3 border border-red-600">
+          <div className="w-[200px] md:w-full h-41 md:h-64">
             <img
               src={item.imageSrc}
               alt={item.altText}
               className=" w-full h-full object-cover  border-2 border-black rounded-lg mb-1"
             />
           </div>
-          <div>
-            <h6 className="text-sm font-bold mb-3 mt-3">{item.title}</h6>
-            <p className="mb-2 text-gray-700">{item.description}</p>
+          <div className=" w-full h-full">
+            <h6 className="text-sm font-semibold md:font-bold mb-3 mt-2 md:mt-3">
+              {item.title}
+            </h6>
+            <p className="mb-2 text-sm md:text-md text-gray-700">
+              {item.description}
+            </p>
             <div className="flex mb-2">
               {[...Array(item.rating)].map((_, i) => (
                 <svg
@@ -88,7 +108,61 @@ function MostLoved() {
           </div>
         </div>
       ))}
+      {/* <div className="flex items-center justify-center md:hidden mt-5">
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 22 22"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-chevron-left mr-5 cursor-pointer"
+            onClick={() => handleScroll("left")}
+          >
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <span className="text-sm">1</span>
+        <span className="text-sm">/</span>
+        <span className="text-sm">3</span>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            
+            height="18"
+            viewBox="0 0 22 22"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-chevron-right ml-5 cursor-pointer"
+            onClick={() => handleScroll("right")}
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
+      </div> */}
     </div>
+
+    // <div className="w-full flex overflow-x-auto ">
+    //   <div
+    //     ref={scrollRef}
+    //     className="flex h-full p-4 transition-transform duration-500"
+    //     onScroll={handleScroll}
+    //   >
+    //     {mostLovedData.map((item, index) => (
+    //       <div key={index} className="w-[420px] mr-3 border border-red-600">
+    //
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
   );
 }
 
