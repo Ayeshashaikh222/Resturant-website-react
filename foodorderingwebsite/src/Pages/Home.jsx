@@ -5,6 +5,7 @@ import BrowseByCategory from "../components/BrowseByCategory";
 import OtherContainer from "../components/OtherContainer";
 import Footer from "../Layout/Footer";
 import SubFooter from "../Layout/SubFooter";
+import Reviewcard from "../components/Reviewcard";
 
 function Home() {
   return (
@@ -42,7 +43,7 @@ function Home() {
 
         <div className="flex flex-col w-full h-full ">
           <MostLoved />
-          <div className="flex items-center justify-center md:hidden mt-5">
+          <div className="flex items-center justify-center md:hidden mt-6 mb-6">
             <button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,6 +83,10 @@ function Home() {
             </button>
           </div>
         </div>
+      </div>
+
+      <div className=" w-full md:w-4/5 h-full md:p-2 flex flex-col md:mx-auto ">
+        <Reviewcard />
       </div>
 
       <div className="bg-purple-100 pt-6 pb-10">

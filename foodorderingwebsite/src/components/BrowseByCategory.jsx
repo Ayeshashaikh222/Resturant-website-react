@@ -26,20 +26,17 @@ function BrowseByCategory() {
   ];
 
   return (
-    <div className="w-full flex p-2 md:p-4 flex-wrap border border-red-600">
+    <div className="w-full flex pr-0 pl-4 md:p-4 flex-wrap">
       {ketoData.map((item, index) => (
-        <div
-          key={index}
-          className="w-[219px] md:w-[279px] mr-3 border border-red-600"
-        >
-          <div className="w-full h-64">
+        <div key={index} className="w-[218px] md:w-[279px] mb-4 md:mb-0 mr-3">
+          <div className="w-full h-58 md:h-64">
             <img
               src={item.imagesSrc}
               alt={item.title}
-              className="w-full h-full object-cover border-2 border-black rounded-lg mb-1"
+              className="w-full h-[235px] md:h-full object-cover !border-b-10 border-black rounded-lg mb-0 md:mb-1"
             />
           </div>
-          <div className="flex mt-3">
+          <div className="flex mt-1 md:mt-3">
             <span className="font-semibold text-lg">{item.title}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
