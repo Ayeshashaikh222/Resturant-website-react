@@ -3,11 +3,24 @@ import React from "react";
 function KetodeliaTakeoutcardInfo() {
   return (
     <div className="w-full h-full">
-      <div className="w-11/12 md:w-9/12 h-full mt-20 flex flex-col md:flex-row mx-auto border border-red-700 ">
-        <div className="md:w-1/2 h-full border border-black"></div>
-        <div className="w-full h-3/5 md:w-1/2 border-b-2 border-l-2 border-r-2 border-black rounded-b-lg">
-          <div className="h-full p-7 flex flex-col  md:justify-center border border-red-600">
-            <h2 className="text-2xl md:text-4xl font-semibold mb-6">
+      <div
+        className="w-11/12 md:w-9/12 h-full mt-20 flex flex-col md:flex-row mx-auto border-2 border-black rounded-lg overflow-hidden "
+        style={{ borderBottom: "5px solid black" }}
+      >
+        <div className="md:w-1/2 h-[230px] md:h-full overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14017.095921757842!2d77.280143!3d28.5615344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce351945f45eb%3A0xf96252dd41babf89!2sJamia%20Millia%20Islamia!5e0!3m2!1sen!2sin!4v1711788605158!5m2!1sen!2sin"
+            width="566"
+            height="500"
+            style={{ border: 0 }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div className="w-full h-3/5 md:w-1/2 border-2 md:border-l-black border-t-black md:md:border-t-none">
+          <div className="h-full ml-4 p-7 flex flex-col md:justify-center">
+            <h2 className="text-2xl md:text-3xl text-purple-900 font-semibold mb-6">
               Ketodelia Takeout Restaurant & Bakery
             </h2>
             <p>
@@ -24,7 +37,7 @@ function KetodeliaTakeoutcardInfo() {
               <p>Sunday closed</p>
             </div>
             <p className="underline mb-4">View Menu</p>
-            <button className="w-2/6 rounded-3xl bg-purple-400 p-2">
+            <button className="w-[180px] md:w-2/6 rounded-3xl mb-4 bg-purple-500 p-3 text-white border-2 border-b-purple-800">
               Get Dirictions
             </button>
           </div>

@@ -4,7 +4,7 @@ function StayInLoop() {
   return (
     <div className="bg-purple-200 p-4 py-20 mt-20 flex flex-col items-center justify-center border-2 border-b-black border-t-black">
       <div className="">
-        <h2 className="text-4xl text-center font-bold mb-6">
+        <h2 className="text-3xl md:text-5xl text-center font-bold mb-6">
           Stay in the Loop
         </h2>
         <p className="mb-6 md:text-lg">

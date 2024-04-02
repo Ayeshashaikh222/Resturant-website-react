@@ -3,7 +3,7 @@ import SocialMediaLogo from "../components/SocialMediaLogo";
 
 function Footer() {
   return (
-    <div className="md:w-9/12 md:pt-20 flex flex-col md:flex-row md:mx-auto ml-4 ">
+    <div className="md:w-9/12 md:pt-20 flex flex-col md:flex-row md:mx-auto ml-4">
       <div className="md:w-4/12 mb-7 m-4">
         <h2 className="font-semibold text-lg mb-4">Contact us</h2>
         <div className="flex flex-col ">

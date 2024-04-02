@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 function MostLoved() {
   const mostLovedData = [
@@ -49,20 +50,22 @@ function MostLoved() {
   ];
 
   return (
-    <div className="w-[470px] md:w-full flex flex-wrap h-full pr-1 pl-2 md:p-4 ">
+    <div className="w-[470px] md:w-full flex flex-wrap h-full pr-1 pl-2 md:p-4">
       {mostLovedData.map((item, index) => (
-        <div
+        <Link
           key={index}
+          to={`/mostLoved-detailpage/${index}`}
           className="w-[216px] md:w-[279px] h-54 mb-4 md:mb-0 mr-3 "
         >
-          <div className="w-[200px] md:w-full h-41 md:h-64">
+          <div className="w-[200px] md:w-full h-41 md:h-64 ml-2 md:ml-0">
             <img
               src={item.imageSrc}
               alt={item.altText}
               className=" w-full h-[200px] md:h-[260px] object-cover  border-2 border-black rounded-lg mb-1"
+              style={{ borderBottom: "5px solid black" }}
             />
           </div>
-          <div className=" w-full h-full">
+          <div className=" w-full h-full ml-2 ">
             <h6 className="text-sm font-semibold md:font-bold mb-3 mt-2 md:mt-3">
               {item.title}
             </h6>
@@ -93,7 +96,7 @@ function MostLoved() {
               <span className="text-[18px]">{item.price}</span>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

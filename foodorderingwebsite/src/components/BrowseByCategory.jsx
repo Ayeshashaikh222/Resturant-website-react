@@ -33,7 +33,8 @@ function BrowseByCategory() {
             <img
               src={item.imagesSrc}
               alt={item.title}
-              className="w-full h-[235px] md:h-full object-cover !border-b-10 border-black rounded-lg mb-0 md:mb-1"
+              className="w-full h-[235px] md:h-full object-cover border-2 border-black rounded-lg mb-0 md:mb-1"
+              style={{ borderBottom: "5px solid black" }}
             />
           </div>
           <div className="flex mt-1 md:mt-3">

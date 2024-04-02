@@ -43,7 +43,7 @@ function Home() {
 
         <div className="flex flex-col w-full h-full ">
           <MostLoved />
-          <div className="flex items-center justify-center md:hidden mt-6 mb-6">
+          {/* <div className="flex items-center justify-center md:hidden mt-6 mb-6">
             <button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,12 +81,49 @@ function Home() {
                 <path d="m9 18 6-6-6-6" />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      <div className=" w-full md:w-4/5 h-full md:p-2 flex flex-col md:mx-auto ">
+      <div className=" w-full md:w-9/12 h-full md:h-[600px] md:p-2 flex flex-col md:mx-auto mb-10 ">
         <Reviewcard />
+        <div className="flex items-center justify-center md:justify-between mt-5 md:mt-[60px]">
+          <button className="hidden md:block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-left"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <button className="text-md border border-black px-2">
+            Show more reviews
+          </button>
+          <button className="hidden md:block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-right"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <div className="bg-purple-100 pt-6 pb-10">
@@ -107,13 +144,13 @@ function Home() {
         <OtherContainer />
       </div>
 
-      <div className="bg-purple-100">
+      {/* <div className="bg-purple-100">
         <Footer />
       </div>
 
       <div className="">
         <SubFooter />
-      </div>
+      </div> */}
     </div>
   );
 }
