@@ -43,45 +43,6 @@ function Home() {
 
         <div className="flex flex-col w-full h-full ">
           <MostLoved />
-          {/* <div className="flex items-center justify-center md:hidden mt-6 mb-6">
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 22 22"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-chevron-left mr-5 cursor-pointer"
-                onClick={() => handleScroll("left")}
-              >
-                <path d="m15 18-6-6 6-6" />
-              </svg>
-            </button>
-            <span className="text-sm">1</span>
-            <span className="text-sm">/</span>
-            <span className="text-sm">3</span>
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 22 22"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-chevron-right ml-5 cursor-pointer"
-                onClick={() => handleScroll("right")}
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </button>
-          </div> */}
         </div>
       </div>
 
@@ -143,14 +104,6 @@ function Home() {
       <div>
         <OtherContainer />
       </div>
-
-      {/* <div className="bg-purple-100">
-        <Footer />
-      </div>
-
-      <div className="">
-        <SubFooter />
-      </div> */}
     </div>
   );
 }

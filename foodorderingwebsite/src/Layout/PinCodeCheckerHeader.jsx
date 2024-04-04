@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 function PinCodeCheckerHeader() {
+  const [isVisible, setIsVisible] = useState(true);
+
   const PincodeSubmitHandler = (event) => {
     event.preventDefault();
   };
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  // if (!isVisible) {
+  //   return null; // Render nothing if isVisible is false
+  // }
 
   return (
     <>
@@ -24,7 +34,10 @@ function PinCodeCheckerHeader() {
             >
               Go
             </button>
-            <span className=" p-2 border border-purple-500 text-purple-500 rounded-xl">
+            <span
+              className=" p-2 border border-purple-500 text-purple-500 rounded-xl cursor-pointer"
+              onClick={handleClose}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

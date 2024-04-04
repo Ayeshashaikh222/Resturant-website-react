@@ -1,33 +1,11 @@
 import React from "react";
 import KetoItemCard from "./KetoItemCard";
+import { BrowseByCategoryData } from "./mock data/data";
 
 function BrowseByCategory() {
-  const ketoData = [
-    {
-      imagesSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/AlmondFlourWaffles.jpg?v=1673029390&width=535",
-      title: "All Day Keto Breakfast",
-    },
-    {
-      imagesSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/CreamyMushroomFettuccineAlfredo.jpg?v=1673029366&width=535",
-      title: "keto Pastas",
-    },
-    {
-      imagesSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/ketogardenveggiepizza.jpg?v=1673293248&width=535",
-      title: "keto Pizzas",
-    },
-    {
-      imagesSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/KetoChickenTenders.jpg?v=1673029425&width=535",
-      title: "keto Mains",
-    },
-  ];
-
   return (
     <div className="w-full flex pr-0 pl-4 md:p-4 flex-wrap">
-      {ketoData.map((item, index) => (
+      {BrowseByCategoryData.map((item, index) => (
         <div key={index} className="w-[218px] md:w-[279px] mb-4 md:mb-0 mr-3">
           <div className="w-full h-58 md:h-64">
             <img

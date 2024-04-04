@@ -10,12 +10,6 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    // <>
-    //   <PinCodeCheckerHeader />
-    //   <Notification />
-    //   <Header />
-    //   <Home />
-    // </>
     <>
       <PinCodeCheckerHeader />
       <Notification />

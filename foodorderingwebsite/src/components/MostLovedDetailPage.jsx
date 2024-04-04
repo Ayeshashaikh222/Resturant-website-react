@@ -1,101 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom/dist";
+import {
+  MostLovedData,
+  MostLovedDetailData,
+  review_data,
+} from "./mock data/data";
 
 function MostLovedDetailPage() {
   const { itemId } = useParams();
 
-  const MostLovedData = [
-    {
-      imageSrc:
-        "https://cdn.shopify.com/s/files/1/0665/2110/4628/products/RaspberryChiaPudding.jpg?v=1673029406&width=360",
-      altText: "",
-      title: "Keto Raspberry Chia Pudding",
-      description:
-        "Our keto pudding is made of fresh raspberries, chia seeds and 35% whipping cream.",
-      rating: 4,
-      ratingCount: 5,
+  const filteredData = MostLovedData.find((item) => item.id == itemId);
+  console.log(filteredData);
 
-      price: "$15.95",
-    },
-    {
-      imageSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/cauliflowersteak.jpg?v=1665714729&width=600",
-      altText: "",
-      title: "Cauliflower Steak (Vegetarian)",
-      description:
-        "Roasted organic cauliflower, topped with roasted cherry tomatoes and cilantro.",
-      rating: 4,
-      ratingCount: 5,
+  const [isContentVisible, setIsContentVisible] = useState(false);
 
-      price: "$17.95",
-    },
-    {
-      imageSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/mashedcauliflower.jpg?v=1673301567&width=600",
-      altText: "",
-      title: "Mashed Cauliflower",
-      description:
-        "Roasted organic cauliflower, topped with roasted cherry tomatoes and cilantro.",
-      rating: 4,
-      ratingCount: 5,
-
-      price: "$9.95",
-    },
-    {
-      imageSrc:
-        "https://cdn.shopify.com/s/files/1/0665/2110/4628/products/KetoLasagna_34fcd752-5d4b-4ccd-a3f3-515c488130b7.jpg?v=1673300561&width=360",
-      altText: "",
-      title: "Keto Lasagna Hearts of Palm",
-      description:
-        "Noodles made from hearts of palm make for the perfect low-carb pasta substitute in this keto version of rich lasagna! Palm hearts, local grass-fed ground beef, mozzarella, parmesan and homemade marinara sauce.",
-      rating: 4,
-      ratingCount: 5,
-      price: "$14.95",
-    },
-  ];
-
-  const review_data = [
-    {
-      id: 1,
-      username: "Julia V.",
-      date: "2/25/2024",
-      message: "All the food was very very good and tasted home made and fresh",
-      ratingCount: 4,
-    },
-    {
-      id: 2,
-      username: "Kataryna W.",
-      date: "7/10/2022",
-      message:
-        "Full of flavor Full of flavor and a great serving size. Made you feel like you were being naughty.",
-      ratingCount: 4,
-    },
-    {
-      id: 3,
-      username: "Laila",
-      date: "5/6/2022",
-      message:
-        "Thank you Ketodelia Thank you Ketodelia for the your Air Fried Buffalo Cauliflower & Blue cheese dip. It could have been better crispier, however delicious. Next time I will reheat it in my Air Fryer. Even though we're not cauliflower lovers, we loved it & enjoyed it tremendously. Looking forward to my next order.",
-      ratingCount: 5,
-    },
-    {
-      id: 4,
-      username: "Keven D.",
-      date: "12/8/2021",
-      message:
-        "Perfect Perfect as usual, always a go to when I come in Toronto for work !",
-      ratingCount: 5,
-    },
-    {
-      id: 5,
-      username: "Keven D.",
-      date: "10/21/2021",
-      message:
-        "Excellent With ranch sauce, it is excellent. I would not say no to more spicy though !",
-      ratingCount: 5,
-    },
-  ];
+  const toggleContentVisibility = () => {
+    setIsContentVisible(!isContentVisible);
+  };
 
   return (
     <div className="w-[455px] md:w-10/12  ml-4 flex flex-col md:items-center md:justify-center md:mx-auto">
@@ -119,19 +41,14 @@ function MostLovedDetailPage() {
       </div>
       <div className="w-full md:w-10/12 h-full flex flex-col md:flex-row">
         <div className="w-[11/12] md:w-1/2">
-          <img
-            src="https://www.ketodelia.ca/cdn/shop/products/cauliflowerbites.jpg?v=1673029354&width=600"
-            className="w-full rounded-xl"
-          />
+          <img src={filteredData.imageSrc} className="w-full rounded-xl" />
         </div>
         <div className="w-full md:w-1/2 mt-4 md:pt-0 md:pl-12 md:ml-2">
           <h6 className="text-[12px] text-gray-600 mb-1 tracking-wider">
             KETODELIA RESTAURANT
           </h6>
-          <h2 className="text-3xl mb-4">
-            Air Fried Keto Buffalo Cauliflower Bites
-          </h2>
-          <span className="text-lg">$12.95</span>
+          <h2 className="text-3xl mb-4">{filteredData.title}</h2>
+          <span className="text-lg">{filteredData.price}</span>
           <div className="flex mb-2">
             {/* {[...Array(item.rating)].map((_, i) => (
               <svg
@@ -190,49 +107,61 @@ function MostLovedDetailPage() {
             </button>
           </div>
           <div className="mb-4">
-            <p className="">
-              Lightly battered organic cauliflower tossed in homemade buffalo
-              sauce with your choice of homemade keto dressing. Air Fried.
-            </p>
+            <p className="">{filteredData.description}</p>
           </div>
-          <div className="flex justify-between p-4 border border-b-black">
-            <div className="flex">
-              <span className="mr-2">
+          <div className="border border-b-black">
+            <div className=" flex justify-between p-4 ">
+              <div className="flex">
+                <span className="mr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="lucide lucide-apple text-gray-600"
+                  >
+                    <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z" />
+                    <path d="M10 2c1 .5 2 2 2 5" />
+                  </svg>
+                </span>
+                <button className="font-semibold">Ingredients</button>
+              </div>
+              <span
+                className="cursor-pointer "
+                onClick={toggleContentVisibility}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="lucide lucide-apple text-gray-600"
+                  className={`lucide lucide-chevron-down text-gray-600`}
                 >
-                  <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z" />
-                  <path d="M10 2c1 .5 2 2 2 5" />
+                  <path d="m6 9 6 6 6-6" />
                 </svg>
               </span>
-              <button className="font-semibold">Ingredients</button>
             </div>
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="lucide lucide-chevron-down text-gray-600"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            </span>
+            {isContentVisible && (
+              <p className="flex flex-col ml-4">
+                <span className="mb-1">{filteredData.items[0]}</span>
+                <span className="mb-1">{filteredData.items[1]}</span>
+                <span className="mb-1">{filteredData.items[2]}</span>
+                <span className="mb-1">{filteredData.items[3]}</span>
+                <span className="mb-1 ">{filteredData.items[4]}</span>
+              </p>
+            )}
           </div>
+
           <div className="flex justify-between p-4 border border-b-black">
             <div className="flex">
               <span className="mr-2">
@@ -301,7 +230,7 @@ function MostLovedDetailPage() {
           You may also like
         </h2>
         <div className="w-[470px] md:w-full flex flex-wrap h-full pr-1 pl-2 md:p-4">
-          {MostLovedData.map((item, index) => (
+          {MostLovedDetailData.map((item, index) => (
             <Link
               key={index}
               className="w-[216px] md:w-[279px] h-54 mb-4 md:mb-0 mr-3 "
@@ -473,8 +402,8 @@ function MostLovedDetailPage() {
         Wrire a review
       </div>
 
-      <div className="w-full h-[850px] md:h-[600px] mt-2 md:mt-10">
-        <div className="flex w-full h-[400px] mt-10 flex-wrap">
+      <div className="w-full h-[850px] md:h-[600px] mt-2 md:mt-10 ">
+        <div className="flex w-full h-[400px] md:ml-12 md:pl-10 mt-10 flex-wrap ">
           {review_data.map((item, index) => (
             <div
               key={index}

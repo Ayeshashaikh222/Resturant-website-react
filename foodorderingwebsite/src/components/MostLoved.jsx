@@ -1,60 +1,14 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { MostLovedData } from "./mock data/data";
 
 function MostLoved() {
-  const mostLovedData = [
-    {
-      imageSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/cauliflowerbites.jpg?v=1673029354&width=360",
-      altText: "Air Fried Keto Buffalo Cauliflower Bites",
-      title: "Air Fried Keto Buffalo Cauliflower Bites",
-      description:
-        "Lightly battered organic cauliflower tossed in homemade buffalo sauce wit...",
-      rating: 4,
-      ratingCount: 5,
-      price: "$12.95",
-    },
-    {
-      imageSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/ketochickensoup.jpg?v=1673029356&width=360",
-      altText: "Keto Chicken Soup",
-      title: "Keto Chicken Soup",
-      description:
-        "Our Keto Chicken Soup is made with homemade organic farmers chicken and c...",
-      rating: 4,
-      ratingCount: 1,
-      price: "$12.95",
-    },
-    {
-      imageSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/NoSugarCheesecake.jpg?v=1673029341&width=360",
-      altText: "Keto Cheesecake",
-      title: "Keto Cheesecake",
-      description:
-        "A classic cheesecake, made Keto-friendly. Deliciously rich and creamy wit...",
-      rating: 4,
-      ratingCount: 9,
-      price: "$12.50",
-    },
-    {
-      imageSrc:
-        "https://www.ketodelia.ca/cdn/shop/products/KetoBagelsCheddarJalapeno.jpg?v=1679087800&width=360",
-      altText: "Keto Bagel Cheddar jalapeno - 4 pack",
-      title: "Keto Bagel Cheddar Jalapeno - 4 pack",
-      description:
-        "Our cheddar jalapeno bagels are made of almond flour, mozzarella and crea... .",
-      rating: 4,
-      ratingCount: 3,
-      price: "$23.95",
-    },
-  ];
-
   return (
     <div className="w-[470px] md:w-full flex flex-wrap h-full pr-1 pl-2 md:p-4">
-      {mostLovedData.map((item, index) => (
+      {MostLovedData.map((item) => (
         <Link
-          key={index}
-          to={`/mostLoved-detailpage/${index}`}
+          key={item.id}
+          to={`/mostLoved-detailpage/${item.id}`}
           className="w-[216px] md:w-[279px] h-54 mb-4 md:mb-0 mr-3 "
         >
           <div className="w-[200px] md:w-full h-41 md:h-64 ml-2 md:ml-0">
