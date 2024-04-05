@@ -64,7 +64,7 @@ function Header() {
       >
         <ul className="md:flex gap-2">
           <li className="p-2">
-            <Link to="/">Menu</Link>
+            <Link to="/menu">Menu</Link>
           </li>
           <li className="p-2">
             <Link to="/">FAQ</Link>
