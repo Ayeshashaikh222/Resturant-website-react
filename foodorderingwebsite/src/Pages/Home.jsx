@@ -10,7 +10,7 @@ import Reviewcard from "../components/Reviewcard";
 function Home() {
   return (
     <div className="w-full">
-      <div className="bg-gray-200 w-screen h-84  mb-10">
+      <div className="bg-gray-100 w-screen h-84  mb-10">
         <div className="h-[355px] md:h-[550px] relative">
           <img
             src="	https://www.ketodelia.ca/cdn/shop/files/Keto_Burger_-_shifted.png?v=1664321824&width=2000"

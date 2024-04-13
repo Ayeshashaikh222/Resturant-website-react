@@ -553,6 +553,106 @@ export const ReadyToCookData = [
     price: 18.99,
   },
 ];
+
+export const KetoDressingsandSaucesData = [
+  {
+    id: "s1",
+    img: "https://www.ketodelia.ca/cdn/shop/products/HomemadeKetoKetchup.jpg?v=1673029524&width=493",
+    title: "Keto Ketchup Sugar Free",
+    description:
+      "Our homemade keto ketchup is made of organic tomatoes. It is low carb and sugar free.",
+    price: 6.9,
+  },
+  {
+    id: "s2",
+    img: "https://www.ketodelia.ca/cdn/shop/products/HomemadeKetoMayonnaise.jpg?v=1673029528&width=360",
+    title: "Keto Mayonnaise Olive Oil",
+    description:
+      "Homemade keto mayonnaise, made with olive oil, free-run egg yolks, mustard, lemon juice and spices.",
+    price: 6.9,
+  },
+  {
+    id: "s3",
+    img: "https://www.ketodelia.ca/cdn/shop/products/HomemadeTexasBBQSauce.jpg?v=1673029533&width=493",
+    title: "Keto Texas BBQ Sauce",
+    description:
+      "Our homemade Texas BBQ sauce is made of organic tomatoes, extra virgin olive oil and spices. It is low carb and sugar free.",
+    price: 6.9,
+  },
+  {
+    id: "s4",
+    img: "https://www.ketodelia.ca/cdn/shop/products/HomemadeKetoRanchDressing.jpg?v=1673029537&width=493",
+    title: "Keto Ranch Dressing",
+    description:
+      "Homemade ranch dressing, made with olive oil, free-run egg yolks, sour cream, whipping cream, mustard, lemon juice and spices.",
+    price: 6.9,
+  },
+  {
+    id: "s4",
+    img: "https://www.ketodelia.ca/cdn/shop/products/KetoMarinaraSauce.jpg?v=1673029540&width=493",
+    title: "Keto Marinara Sauce",
+    description:
+      "Our homemade keto Marinara sauce is made of fresh organic tomatoes, extra virgin olive oil and spices. It is low carb and sugar free.",
+    price: 6.9,
+  },
+];
+
+export const BeveragesData = [
+  {
+    id: "b1",
+    img: "https://www.ketodelia.ca/cdn/shop/products/Electrolytedrink.jpg?v=1673029433&width=360",
+    title: "Ketodelia Electrolyte Drink",
+    description:
+      "Ketodelia branded electrolyte enhanced drinking water. Mineral enhanced water, fresh lemon, fresh mint, Himalayan salt, magnesium, and erythritol.",
+    price: 3.95,
+  },
+  {
+    id: "b2",
+    img: "https://www.ketodelia.ca/cdn/shop/products/dietpopdrinks.jpg?v=1673387016&width=360",
+    title: "Diet Pop Drink",
+    description: "Your choice of sugar-free pop. ",
+    price: 2.5,
+  },
+  {
+    id: "b3",
+    img: "https://www.ketodelia.ca/cdn/shop/products/st.pellegrino.jpg?v=1673029439&width=360",
+    title: "S.Pellegrino Sparkling Natural Mineral Water",
+    description: "S.Pellegrino Sparkling Natural",
+    price: 4.25,
+  },
+  {
+    id: "b4",
+    img: "https://www.ketodelia.ca/cdn/shop/products/FijiArtesianWater.jpg?v=1673029436&width=360",
+    title: "Fiji Natural Artesian Water",
+    description:
+      "Fiji Natural Artesian Water is perfect for hydration on the go, at the gym or in the office. It's also a great addition to any meal and the perfect complement to fine dining.",
+    price: 4.25,
+  },
+  {
+    id: "b5",
+    img: "https://www.ketodelia.ca/cdn/shop/products/BulletproofCoffee.jpg?v=1673029441&width=360",
+    title: "Bulletproof Coffee",
+    description:
+      "Certified clean organic coffee blended with MCT oil and grass-fed butter.",
+    price: 8.95,
+  },
+  {
+    id: "b6",
+    img: "https://www.ketodelia.ca/cdn/shop/products/OrganicCoffee.jpg?v=1673029446&width=360",
+    title: " Organic Coffee",
+    description:
+      "Our freshly ground, stove top brewed coffee is the perfect way to start your day. With 16 oz of delicious organic coffee, this cup is sure to wake you up and get you going.",
+    price: 5.95,
+  },
+  {
+    id: "b7",
+    img: "https://www.ketodelia.ca/cdn/shop/products/OrganicTea.jpg?v=1673029444&width=360",
+    title: "Organic Tea",
+    description: "Elevate your tea time with our eco-friendly, organic blend.",
+    price: 2.95,
+  },
+];
+
 export const KetoCakesData = [
   {
     id: "a69",
@@ -572,7 +672,7 @@ export const KetoCakesData = [
   },
   {
     id: "a71",
-    img: "hhttps://www.ketodelia.ca/cdn/shop/products/KetoChocolateCake.jpg?v=1673387538&width=360",
+    img: "https://www.ketodelia.ca/cdn/shop/products/KetoChocolateCake.jpg?v=1673387538&width=360",
     title: "Keto Chocolate Cake 8”",
     description:
       "The perfect treat for chocoholics, this Keto Chocolate Cake has an...",
@@ -596,7 +696,7 @@ export const KetoCakesData = [
   },
   {
     id: "a74",
-    img: "https://www.ketodelia.ca/cdn/shop/products/KetoPeanutButterChocolatePie.jpg?v=1673387792&width=360",
+    img: "https://www.ketodelia.ca/cdn/shop/files/PeanutButterChocolatePie.jpg?v=1712439025&width=360",
     title: "Keto Peanut Butter And Chocolate Pie",
     description:
       "You are just going to love this creamy peanut butter pie with...",

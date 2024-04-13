@@ -67,19 +67,19 @@ function Header() {
             <Link to="/menu">Menu</Link>
           </li>
           <li className="p-2">
-            <Link to="/">FAQ</Link>
+            <Link to="/faq">FAQ</Link>
           </li>
           <li className="p-2">
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li className="p-2">
-            <Link to="/">Gift cards</Link>
+            <Link to="/gift">Gift cards</Link>
           </li>
           <li className="p-2">
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li className="p-2">
-            <Link to="/">Locations</Link>
+            <Link to="/location">Locations</Link>
           </li>
         </ul>
       </div>
